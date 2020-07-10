@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AdoptService} from '../../service/adopt.service'
 
+
 @Component({
   selector: 'app-adoption',
   templateUrl: './adoption.component.html',
@@ -8,9 +9,12 @@ import {AdoptService} from '../../service/adopt.service'
 })
 export class AdoptionComponent implements OnInit {
 
-  constructor(adoptService:AdoptService) { }
+  constructor(private adoptService:AdoptService) { }
 
   ngOnInit(): void {
+    this.adoptService.GetAll();
   }
-
+  GetAll(){
+    
+  }
 }
