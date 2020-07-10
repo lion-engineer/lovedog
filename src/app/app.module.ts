@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SharedlayoutComponent } from './_shared/sharedlayout/sharedlayout.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +18,11 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent]  
 })
-export class AppModule { }
+export class AppModule {   
+}
