@@ -28,9 +28,9 @@ import { HomeComponent } from './modules/home/home.component';
   ],
   imports: [
     BrowserModule,
+    BaseRoutingModule,
     AppRoutingModule,
     FontAwesomeModule,
-    BaseRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]  
