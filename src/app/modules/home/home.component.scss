@@ -1,0 +1,26 @@
+@use '../../programs-style/basic.scss';
+.banner{
+    background-image: url(../../../assets/images/bg-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+   
+    height: calc(100vh - 20px);
+    .info{
+        padding-top: 150px;
+        h1{
+            color:basic.$color-4-hex;
+            font-size: 5rem;
+            font-weight: 800;        
+            word-spacing: 10px;
+            text-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
+            
+        }
+        p{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+    
+}

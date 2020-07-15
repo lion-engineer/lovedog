@@ -8,7 +8,17 @@
 }
 
 .navbar{
-    &.navbar-bg{
-        background-color: basic.$color-3-hex;
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                color:white;
+                font-size: 24px;
+
+                &:hover{
+                    color: basic.$color-4-hex;
+                    border-bottom: 2px solid basic.$color-4-hex;
+                }
+            }
+        }
     }
 }
