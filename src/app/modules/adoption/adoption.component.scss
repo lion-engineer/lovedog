@@ -1,0 +1,63 @@
+@use '../../programs-style/basic.scss';
+.adopt-card{
+    position: relative;
+    // width: 400px;
+    height: 300px;
+    margin: 0 10px;
+    .face{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+
+        &.face1{
+            background: rgba(119,179,216, 0.5);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            transform-origin: bottom;
+            
+
+            img{
+                max-height: 300px;
+                object-fit: cover;
+            }
+            h3{
+                margin: 10px 0 0;
+                color: #fff;
+                text-align: center;
+                font-size: 1.5em;
+            }
+        }
+
+        &.face2{
+            background: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            transform-origin: top;
+            transform: translateY(100%) rotateX(90deg);
+        }
+    }
+    &:hover{
+        .face{
+            &.face1{
+                transform: translateY(-100%) rotateX(90deg);
+                transition: all 0.5s;
+                background: basic.$color-4-hex;
+            }
+
+            &.face2{
+                transform: translateY(0) rotateX(0deg);
+                transition: all 0.5s;
+            }
+        }
+    }
+}
