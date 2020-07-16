@@ -20,3 +20,16 @@ $color-4-hsla: hsla(28, 89, 54, 1);
 $color-5-hsla: hsla(11, 85, 45, 1);
 
 $color-white:#FFFFFF;
+
+
+@mixin breakpoint($point) {
+    @if $point == large {
+      @media (max-width: 992px) { @content; }
+    }
+    @else if $point == medium {
+      @media (max-width: 720px) { @content; }
+    }
+    @else if $point == small {
+      @media (max-width: 576px)  { @content; }
+    }
+  }
