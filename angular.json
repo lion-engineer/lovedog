@@ -29,11 +29,15 @@
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/owl.carousel2/dist/assets/owl.carousel.min.css",
+              "node_modules/owl.carousel2/dist/assets/owl.theme.default.min.css",
+              "node_modules/owl.carousel2/dist/assets/owl.theme.green.min.css",
               "src/styles.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/owl.carousel2/dist/owl.carousel.min.js"
             ]
           },
           "configurations": {
@@ -96,13 +100,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/bootstrap/scss/bootstrap.scss"
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/owl.carousel2/dist/assets/owl.carousel.min.css",
+              "node_modules/owl.carousel2/dist/assets/owl.theme.default.min.css",
+              "node_modules/owl.carousel2/dist/assets/owl.theme.green.min.css",
+              "src/styles.scss"
+              
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/owl.carousel2/dist/owl.carousel.min.js"
             ]
           }
         },

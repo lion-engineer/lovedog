@@ -15,6 +15,8 @@ import { AdoptionComponent } from './modules/adoption/adoption.component';
 import { HostpitalComponent } from './modules/hostpital/hostpital.component';
 import { LostComponent } from './modules/lost/lost.component';
 import { HomeComponent } from './modules/home/home.component';
+import { OwlcarouselDirective } from './directive/owlcarousel.directive';
+import { BannerComponent } from './modules/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HomeComponent } from './modules/home/home.component';
     AdoptionComponent,
     HostpitalComponent,
     LostComponent,
-    HomeComponent
+    HomeComponent,
+    OwlcarouselDirective,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
