@@ -11,7 +11,7 @@ const routes: Routes = [{
   component: SharedlayoutComponent,
   children: [
     {
-      path: 'index', // child route path
+      path: '', // child route path
       component: HomeComponent // child route component that the router renders
     },
     {

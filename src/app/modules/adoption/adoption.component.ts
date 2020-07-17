@@ -9,12 +9,11 @@ import {AdoptService} from '../../service/adopt.service'
 })
 export class AdoptionComponent implements OnInit {
 
-  constructor(private adoptService:AdoptService) { }
+  constructor(private adoptService:AdoptService) { 
+    
+  }
 
   ngOnInit(): void {
     this.adoptService.GetAll();
-  }
-  GetAll(){
-    
   }
 }

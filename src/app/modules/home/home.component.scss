@@ -4,9 +4,27 @@
 }
 
 .adoption{
-    height: 80vh;
-    .container-fluid{
-        padding-right: 5%;
-        padding-left: 5%;
+
+    .adopt-title{
+        font-size: 3rem;
+        text-shadow: 5px 2px 5px;
+        color: basic.$color-4-hex;
+        letter-spacing: 15px;
     }
+
+    @include basic.breakpoint(small) { 
+        height: 50vh;
+    }
+
+    .adopt-container{
+        @include basic.breakpoint(small) { 
+            height: 50vh;
+            overflow: hidden;
+        }
+        @include basic.breakpoint(medium) { 
+            height: 50vh;
+            overflow-y: scroll;
+        }
+    }
+    
 }

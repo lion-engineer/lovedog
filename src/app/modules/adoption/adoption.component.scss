@@ -1,7 +1,7 @@
 @use '../../programs-style/basic.scss';
+
 .adopt-card{
     position: relative;
-    // width: 400px;
     height: 300px;
     margin: 0 10px;
     .face{
@@ -11,9 +11,10 @@
         width: 100%;
         height: 100%;
         transition: 0.5s;
+        padding: 5px 0;
 
         &.face1{
-            background: rgba(119,179,216, 0.5);
+            background: transparent;
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -26,7 +27,7 @@
 
             img{
                 max-height: 300px;
-                object-fit: cover;
+                object-fit: contain;
             }
             h3{
                 margin: 10px 0 0;
@@ -59,5 +60,9 @@
                 transition: all 0.5s;
             }
         }
+    }
+
+    @include basic.breakpoint(small) { 
+        margin: 10px 0;
     }
 }
