@@ -18,11 +18,9 @@
 
     .adopt-container{
         @include basic.breakpoint(small) { 
-            height: 50vh;
             overflow: hidden;
         }
         @include basic.breakpoint(medium) { 
-            height: 50vh;
             overflow-y: scroll;
         }
     }
