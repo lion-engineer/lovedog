@@ -1,5 +1,8 @@
 @use '../../programs-style/basic.scss';
 .banner{
+    background: rgb(255,255,255);
+    box-shadow: 5px 30px 10px rgba(255,255,255,0.5);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(166,166,166,1) 20%, rgba(128,127,127,0.6979166666666667) 45%, rgba(79,78,78,0.6026785714285714) 78%, rgba(9,9,9,0.4990371148459384) 100%);
     .slide{
         position: relative;
         .slide-Content{

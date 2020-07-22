@@ -17,6 +17,7 @@ import { LostComponent } from './modules/lost/lost.component';
 import { HomeComponent } from './modules/home/home.component';
 import { OwlcarouselDirective } from './directive/owlcarousel.directive';
 import { BannerComponent } from './modules/banner/banner.component';
+import { SterilizationPipe,BodyTypePipe,BacterinPipe,Sex } from './pipe/adopt/sterilization.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,11 @@ import { BannerComponent } from './modules/banner/banner.component';
     LostComponent,
     HomeComponent,
     OwlcarouselDirective,
-    BannerComponent
+    BannerComponent,
+    SterilizationPipe,
+    BodyTypePipe,
+    BacterinPipe,
+    Sex
   ],
   imports: [
     BrowserModule,

@@ -1,41 +1,48 @@
-
 <div class="row justify-content-center h-100">
-    <div class="col-12 col-md-3 adopt-card">
+    <div class="col-12 col-md-3 adopt-card" *ngFor="let item of adoptionPromote">
         <div class="face face1">
             <div class="content">
-                <img class="img-thumbnail"
-                    src="https://asms.coa.gov.tw/amlapp/upload/pic/f67605a0-be32-41ee-ad62-f7a10dad788c_org.jpg" alt="">
+                <img class="img-thumbnail" src="{{item.album_file}}" alt="">
             </div>
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad vero magnam aspernatur.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-sm-3 adopt-card">
-        <div class="face face1">
-            <div class="content">
-                <img class="img-thumbnail"
-                    src="https://asms.coa.gov.tw/amlapp/upload/pic/f67605a0-be32-41ee-ad62-f7a10dad788c_org.jpg" alt="">
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad vero magnam aspernatur.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-sm-3 adopt-card">
-        <div class="face face1">
-            <div class="content">
-                <img class="img-thumbnail"
-                    src="https://asms.coa.gov.tw/amlapp/upload/pic/f67605a0-be32-41ee-ad62-f7a10dad788c_org.jpg" alt="">
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad vero magnam aspernatur.</p>
+                <div class="row no-gutters">
+                    <div class="col-4 text-center border px-2">動物類型</div>
+                    <div class="col-8 text-center border px-2">{{item.animal_kind}}</div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-4 text-center border px-2">動物性別</div>
+                    <div class="col-8 text-center border px-2">{{item.animal_sex | sex}}</div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-4 text-center border px-2">動物體型</div>
+                    <div class="col-8 text-center border px-2">{{item.animal_bodytype | bodyType}}</div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-4 text-center border px-2">動物毛色</div>
+                    <div class="col-8 text-center border px-2">{{item.animal_colour}}</div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-4 text-center border px-2">是否絕育</div>
+                    <div class="col-8 text-center border px-2">{{item.animal_sterilization | sterilization}}</div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-4 text-center border px-2">施打狂犬疫苗</div>
+                    <div class="col-8 text-center border px-2">{{item.animal_bacterin | bacterin}}</div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-4 text-center border px-2">收容所</div>
+                    <div class="col-8 text-center border px-2">{{item.shelter_name}}</div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-4 text-center border px-2">電話</div>
+                    <div class="col-8 text-center border px-2">{{item.shelter_tel}}</div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-4 text-center border px-2">地址</div>
+                    <div class="col-8 text-center border px-2 text-truncate" title="{{item.shelter_address}}">{{item.shelter_address}}</div>
+                </div>
             </div>
         </div>
     </div>

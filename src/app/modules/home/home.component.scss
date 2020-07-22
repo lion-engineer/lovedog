@@ -6,10 +6,6 @@
 .adoption{
 
     .adopt-title{
-        font-size: 3rem;
-        text-shadow: 5px 2px 5px;
-        color: basic.$color-4-hex;
-        letter-spacing: 15px;
     }
 
     @include basic.breakpoint(small) { 
