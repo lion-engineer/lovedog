@@ -1,15 +1,26 @@
 @use '../../programs-style/basic.scss';
 .banner{
     height: 100vh;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.5);
 }
 
 .adoption{
-
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(236,236,236,0.6979166666666667) 25%, rgba(223,222,222,0.6026785714285714) 75%, rgba(255,255,255,0.4990371148459384) 100%);
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.5);
     .adopt-title{
+        img{
+
+            @include basic.breakpoint(small) { 
+                width: 100%;
+            }
+        }
     }
 
     @include basic.breakpoint(small) { 
         height: 50vh;
+        margin-bottom: 200px;
+        padding-bottom: 100px;
     }
 
     .adopt-container{
