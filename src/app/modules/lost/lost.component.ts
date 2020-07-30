@@ -48,7 +48,7 @@ export class LostComponent implements OnInit {
   }
 
   getTop30() {
-    this.httpClient.get<LostPet[]>("../../../assets/data/animalMissing.json").subscribe(data => {
+    this.httpClient.get<LostPet[]>("./assets/data/animalMissing.json").subscribe(data => {
 
       let hasImage = data.filter(x => x.PICTURE != '');
       let info: Array<LostPet> = [];
@@ -59,6 +59,11 @@ export class LostComponent implements OnInit {
       this.lostPromote = info;
       console.log(this.lostPromote);
     });
+  }
+
+  refresh(){
+    this.getTop30();
+   // this.owlcarouselDirective.reInitOwl();
   }
 
   createImageFromBlob(image: Blob) {

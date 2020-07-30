@@ -18,7 +18,7 @@ export class AdoptionComponent implements OnInit {
     this.GetTop30();
   }
   GetTop30(){
-    this.httpClient.get<Adoption[]>("../../../assets/data/animalAdopt.json").subscribe(data =>{
+    this.httpClient.get<Adoption[]>("./assets/data/animalAdopt.json").subscribe(data =>{
       
       let hasImage = data.filter(x => x.album_file != '');
       let info:Array<Adoption> = [];

@@ -1,1 +1,18 @@
-<p>hostpital works!</p>
+<div class="text-right py-2">
+  <button class="btn btn btn-outline-info" (click)='getInfo()' >more</button>
+</div>
+<div class="row">
+  <div class="card col-12 col-md-4 mb-4" *ngFor="let item of hospitalInfo">
+    <button type="button" class="btn btn-outline-primary status">{{item.status}}</button>
+    <div class="card-header">
+      {{item.name}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{item.doctor}}</li>
+      <li class="list-group-item">{{item.certificateNumber}}</li>
+      <li class="list-group-item">{{item.tel}}</li>
+      <li class="list-group-item"><a href="https://www.google.com.tw/maps/place/{{item.address}}" target="_blank">{{item.address}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
