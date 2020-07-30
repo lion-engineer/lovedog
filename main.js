@@ -165,6 +165,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _directive_owlcarousel_directive__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./directive/owlcarousel.directive */ "./src/app/directive/owlcarousel.directive.ts");
 /* harmony import */ var _modules_banner_banner_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/banner/banner.component */ "./src/app/modules/banner/banner.component.ts");
 /* harmony import */ var _pipe_adopt_sterilization_pipe__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pipe/adopt/sterilization.pipe */ "./src/app/pipe/adopt/sterilization.pipe.ts");
+/* harmony import */ var _service_utility_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./service/utility.service */ "./src/app/service/utility.service.ts");
+
 
 
 
@@ -186,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 class AppModule {
 }
 AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [{ provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _service_utility_service__WEBPACK_IMPORTED_MODULE_17__["ApiInterceptor"], multi: true }], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
             src_app_routing_base_base_routing_module__WEBPACK_IMPORTED_MODULE_5__["BaseRoutingModule"],
@@ -237,7 +239,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                     _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeModule"],
                 ],
-                providers: [],
+                providers: [{ provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _service_utility_service__WEBPACK_IMPORTED_MODULE_17__["ApiInterceptor"], multi: true }],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
             }]
     }], null, null); })();
@@ -490,7 +492,7 @@ class AdoptionComponent {
         this.GetTop30();
     }
     GetTop30() {
-        this.httpClient.get(location.origin + "/assets/data/animalAdopt.json").subscribe(data => {
+        this.httpClient.get("./assets/data/animalAdopt.json").subscribe(data => {
             let hasImage = data.filter(x => x.album_file != '');
             let info = [];
             for (let i = 0; i < 6; i++) {
@@ -580,11 +582,11 @@ class BannerComponent {
         this.InitBannerInfo();
     }
     InitBannerInfo() {
-        this.bannerInfos.push({ imgPath: '../../../assets/images/bg-1.png', content: '狗不是我們人一生的全部，但牠卻讓我們的人生完整了。', author: '生態攝影師 羅傑、卡拉斯' });
-        this.bannerInfos.push({ imgPath: '../../../assets/images/bg-2.png', content: '錢可以買到一條很優秀的狗，卻買不到它搖尾的熱情。', author: '亨利·惠勒·蕭' });
-        this.bannerInfos.push({ imgPath: '../../../assets/images/bg-3.png', content: '如果我們了解狗真正的本性，並且知道如何鼓勵它們，我們就能成為更好的主人。', author: '依莉莎白湯瑪斯' });
-        this.bannerInfos.push({ imgPath: '../../../assets/images/bg-4.png', content: '對一隻狗好，也許只花你一部分的時間，而它，卻將一輩子回報於你。如果你願意，它知道怎樣感動你的心', author: '嘉貝麗．文生' });
-        this.bannerInfos.push({ imgPath: '../../../assets/images/bg-5.png', content: '寵物只是你生活的一部分,但你卻是寵物的全世界。', author: '' });
+        this.bannerInfos.push({ imgPath: 'assets/images/bg-1.png', content: '狗不是我們人一生的全部，但牠卻讓我們的人生完整了。', author: '生態攝影師 羅傑、卡拉斯' });
+        this.bannerInfos.push({ imgPath: 'assets/images/bg-2.png', content: '錢可以買到一條很優秀的狗，卻買不到它搖尾的熱情。', author: '亨利·惠勒·蕭' });
+        this.bannerInfos.push({ imgPath: 'assets/images/bg-3.png', content: '如果我們了解狗真正的本性，並且知道如何鼓勵它們，我們就能成為更好的主人。', author: '依莉莎白湯瑪斯' });
+        this.bannerInfos.push({ imgPath: 'assets/images/bg-4.png', content: '對一隻狗好，也許只花你一部分的時間，而它，卻將一輩子回報於你。如果你願意，它知道怎樣感動你的心', author: '嘉貝麗．文生' });
+        this.bannerInfos.push({ imgPath: 'assets/images/bg-5.png', content: '寵物只是你生活的一部分,但你卻是寵物的全世界。', author: '' });
     }
 }
 BannerComponent.ɵfac = function BannerComponent_Factory(t) { return new (t || BannerComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"])); };
@@ -943,7 +945,7 @@ class LostComponent {
         //this.getImageFromService();
     }
     getTop30() {
-        this.httpClient.get(location.origin + "/assets/data/animalMissing.json").subscribe(data => {
+        this.httpClient.get("./assets/data/animalMissing.json").subscribe(data => {
             let hasImage = data.filter(x => x.PICTURE != '');
             let info = [];
             for (let i = 0; i < 6; i++) {
@@ -1328,7 +1330,7 @@ class HospitalService {
         this.httpClient = httpClient;
     }
     getHostpital() {
-        return this.httpClient.get(location.origin + "/assets/data/animalHostpital.json");
+        return this.httpClient.get("./assets/data/animalHostpital.json");
     }
 }
 HospitalService.ɵfac = function HospitalService_Factory(t) { return new (t || HospitalService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
@@ -1379,6 +1381,47 @@ LostService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
     }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
 class LostPet {
 }
+
+
+/***/ }),
+
+/***/ "./src/app/service/utility.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/service/utility.service.ts ***!
+  \********************************************/
+/*! exports provided: UtilityService, ApiInterceptor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UtilityService", function() { return UtilityService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiInterceptor", function() { return ApiInterceptor; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+class UtilityService {
+    constructor() { }
+}
+UtilityService.ɵfac = function UtilityService_Factory(t) { return new (t || UtilityService)(); };
+UtilityService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: UtilityService, factory: UtilityService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](UtilityService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return []; }, null); })();
+class ApiInterceptor {
+    intercept(req, next) {
+        const baseUrl = document.getElementsByTagName('base')[0].href;
+        const apiReq = req.clone({ url: `${baseUrl}${req.url}` });
+        return next.handle(apiReq);
+    }
+}
+ApiInterceptor.ɵfac = function ApiInterceptor_Factory(t) { return new (t || ApiInterceptor)(); };
+ApiInterceptor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: ApiInterceptor, factory: ApiInterceptor.ɵfac });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ApiInterceptor, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], null, null); })();
 
 
 /***/ }),
@@ -1444,7 +1487,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().boot
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Project\Github\lovedog\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! E:\Project\github\lionengineer\lovedog\src\main.ts */"./src/main.ts");
 
 
 /***/ })
