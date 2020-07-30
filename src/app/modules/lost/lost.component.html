@@ -1,1 +1,37 @@
-<p>lost works!</p>
+<div class="row justify-content-center">
+    <div class="owl-carousel banner" appOwlcarousel [owlOptions]="owlCarouselOptions">
+        <div class="item card" *ngFor="let item of lostPromote">
+            <img class='card-img-top' src='{{item.PICTURE}}' alt="Place image title"
+                onerror="this.src='../../../assets/images/pet.png'">
+            <div class="card-body text-center">           
+                <button type="button" class="btn btn-outline-primary" title="晶片號碼">{{item.icnumber}}</button>     
+            </div>
+            <table class="text-center table-bordered">
+                <tr>
+                    <td class='table-primary'>名字</td>
+                    <td>{{item.petname}}</td>                    
+                </tr>
+                <tr>
+                    <td class='table-primary'>種類/性別</td>
+                    <td>{{item.petKind}}/{{item.petsex}}</td>                    
+                </tr>
+                <tr>
+                    <td class='table-primary'>走失日期</td>
+                    <td>{{item.misstime}}</td>                    
+                </tr>
+                <tr>
+                    <td class='table-primary'>走失地點</td>
+                    <td>{{item.misslocation}}</td>                    
+                </tr>
+                <tr>
+                    <td class='table-primary'>聯絡人</td>
+                    <td>{{item.owner}}</td>                    
+                </tr>
+                <tr>
+                    <td class='table-primary'>電話</td>
+                    <td>{{item.tel}}</td>                    
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

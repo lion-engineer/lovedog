@@ -1,11 +1,21 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LostService {
+  imageToShow: any;
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
+
+  getImage(imageUrl: string): Observable<Blob> {
+    return this.httpClient.get(imageUrl, { responseType: 'blob' });
+  }
+
+
+
 }
 
 
