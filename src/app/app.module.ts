@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import{BaseRoutingModule} from 'src/app/routing/base/base-routing.module'
+import { BaseRoutingModule } from 'src/app/routing/base/base-routing.module'
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,8 +17,9 @@ import { LostComponent } from './modules/lost/lost.component';
 import { HomeComponent } from './modules/home/home.component';
 import { OwlcarouselDirective } from './directive/owlcarousel.directive';
 import { BannerComponent } from './modules/banner/banner.component';
-import { SterilizationPipe,BodyTypePipe,BacterinPipe,Sex } from './pipe/adopt/sterilization.pipe';
-
+import { SterilizationPipe, BodyTypePipe, BacterinPipe, Sex } from './pipe/adopt/sterilization.pipe';
+import { ApiInterceptor } from './service/utility.service'
+import { OwlModule } from 'ngx-owl-carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,9 +43,10 @@ import { SterilizationPipe,BodyTypePipe,BacterinPipe,Sex } from './pipe/adopt/st
     BaseRoutingModule,
     AppRoutingModule,
     FontAwesomeModule,
+    OwlModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]  
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true }],
+  bootstrap: [AppComponent]
 })
-export class AppModule {   
+export class AppModule {
 }

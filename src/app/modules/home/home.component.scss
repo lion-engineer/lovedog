@@ -32,3 +32,20 @@
     // }
     
 }
+.hospital-title,
+.lost-title{
+    color: basic.$color-4-hex;
+}
+
+.owl-nav{
+    display: flex;
+    justify-content: center;
+    .owl-prev{
+        display: inline-block;
+        margin: 0 auto;
+    }
+    .owl-next{
+        display: inline-block;
+        margin: 0 auto;
+    }
+}

@@ -1,18 +1,31 @@
 <div class="text-right py-2">
-  <button class="btn btn btn-outline-info" (click)='getInfo()' >more</button>
+  <button class="btn btn btn-outline-info" (click)='getInfo()'>more</button>
 </div>
 <div class="row">
   <div class="card col-12 col-md-4 mb-4" *ngFor="let item of hospitalInfo">
     <button type="button" class="btn btn-outline-primary status">{{item.status}}</button>
     <div class="card-header">
-      {{item.name}}
+      <h5>{{item.name}}</h5>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{item.doctor}}</li>
-      <li class="list-group-item">{{item.certificateNumber}}</li>
-      <li class="list-group-item">{{item.tel}}</li>
-      <li class="list-group-item"><a href="https://www.google.com.tw/maps/place/{{item.address}}" target="_blank">{{item.address}}</a>
-      </li>
-    </ul>
+    <table class="table table-border">
+      <tr>
+        <td>醫師</td>
+        <td>{{item.doctor}}</td>
+      </tr>
+      <tr>
+        <td>字號</td>
+        <td>{{item.certificateNumber}}</td>
+      </tr>
+      <tr>
+        <td>電話</td>
+        <td>{{item.tel}}</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <fa-icon class="pr-2 iconFaMapMarked" [icon]="iconFaMapMarked"></fa-icon><a href="https://www.google.com.tw/maps/place/{{item.address}}"
+            target="_blank">{{item.address}}</a>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>

@@ -10,7 +10,7 @@ export class HospitalService {
   constructor(private httpClient:HttpClient) { }
 
   getHostpital():Observable<HospitalInfo[]>{
-    return this.httpClient.get<HospitalInfo[]>("./assets/data/animalHostpital.json");
+    return this.httpClient.get<HospitalInfo[]>("assets/data/animalHostpital.json");
   }
 }
 export class HospitalInfo{

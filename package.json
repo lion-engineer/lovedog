@@ -8,12 +8,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "npx":"npx ngh --dir=dist/lovedog"
+    "npx": "npx ngh --dir=dist/lovedog"
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "~10.0.0",
     "@angular/animations": "~10.0.0",
+    "@angular/cli": "~10.0.0",
     "@angular/common": "~10.0.0",
     "@angular/compiler": "~10.0.0",
     "@angular/core": "~10.0.0",
@@ -29,6 +29,7 @@
     "@types/owl.carousel": "^2.3.1",
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
+    "ngx-owl-carousel": "^2.0.7",
     "owl.carousel2": "^2.2.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",

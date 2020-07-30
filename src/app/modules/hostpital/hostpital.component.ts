@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{HospitalService, HospitalInfo} from "../../service/hospital.service"
+import { faMapMarked } from "@fortawesome/free-solid-svg-icons"
 
 @Component({
   selector: 'app-hostpital',
@@ -9,6 +10,7 @@ import{HospitalService, HospitalInfo} from "../../service/hospital.service"
 export class HostpitalComponent implements OnInit {
 
   hospitalInfo:Array<HospitalInfo>;
+  iconFaMapMarked = faMapMarked;
   constructor(private hospitalService:HospitalService) { }
 
   ngOnInit(): void {
@@ -23,7 +25,6 @@ export class HostpitalComponent implements OnInit {
         info.push(data[random]);
       }
       this.hospitalInfo = info;
-      console.log(this.hospitalInfo);
     });
   }
 }
