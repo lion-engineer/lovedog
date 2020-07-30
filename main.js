@@ -830,8 +830,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function LostComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "img", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("error", function LostComponent_div_2_Template_img_error_1_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r2.handleImageError($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "button", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
@@ -976,12 +979,12 @@ class LostComponent {
             console.log(error);
         });
     }
-    handleImageError(isError) {
-        this.isImageLoading = false;
+    handleImageError(event) {
+        event.target.src = 'assets/images/pet.png';
     }
 }
 LostComponent.ɵfac = function LostComponent_Factory(t) { return new (t || LostComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_service_lost_service__WEBPACK_IMPORTED_MODULE_3__["LostService"])); };
-LostComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LostComponent, selectors: [["app-lost"]], decls: 3, vars: 2, consts: [[1, "row", "justify-content-center"], ["appOwlcarousel", "", 1, "owl-carousel", "banner", 3, "owlOptions"], ["class", "item card", 4, "ngFor", "ngForOf"], [1, "item", "card"], ["alt", "Place image title", "onerror", "this.src='assets/images/pet.png'", 1, "card-img-top", 3, "src"], [1, "card-body", "text-center"], ["type", "button", "title", "\u6676\u7247\u865F\u78BC", 1, "btn", "btn-outline-primary"], [1, "text-center", "table-bordered"], [1, "table-primary"]], template: function LostComponent_Template(rf, ctx) { if (rf & 1) {
+LostComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LostComponent, selectors: [["app-lost"]], decls: 3, vars: 2, consts: [[1, "row", "justify-content-center"], ["appOwlcarousel", "", 1, "owl-carousel", "banner", 3, "owlOptions"], ["class", "item card", 4, "ngFor", "ngForOf"], [1, "item", "card"], ["alt", "Place image title", 1, "card-img-top", 3, "src", "error"], [1, "card-body", "text-center"], ["type", "button", "title", "\u6676\u7247\u865F\u78BC", 1, "btn", "btn-outline-primary"], [1, "text-center", "table-bordered"], [1, "table-primary"]], template: function LostComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, LostComponent_div_2_Template, 36, 9, "div", 2);
