@@ -490,7 +490,7 @@ class AdoptionComponent {
         this.GetTop30();
     }
     GetTop30() {
-        this.httpClient.get("../../../assets/data/animalAdopt.json").subscribe(data => {
+        this.httpClient.get(location.origin + "/assets/data/animalAdopt.json").subscribe(data => {
             let hasImage = data.filter(x => x.album_file != '');
             let info = [];
             for (let i = 0; i < 6; i++) {
@@ -943,7 +943,7 @@ class LostComponent {
         //this.getImageFromService();
     }
     getTop30() {
-        this.httpClient.get("../../../assets/data/animalMissing.json").subscribe(data => {
+        this.httpClient.get(location.origin + "/assets/data/animalMissing.json").subscribe(data => {
             let hasImage = data.filter(x => x.PICTURE != '');
             let info = [];
             for (let i = 0; i < 6; i++) {
@@ -1328,7 +1328,7 @@ class HospitalService {
         this.httpClient = httpClient;
     }
     getHostpital() {
-        return this.httpClient.get("../../../assets/data/animalHostpital.json");
+        return this.httpClient.get(location.origin + "/assets/data/animalHostpital.json");
     }
 }
 HospitalService.ɵfac = function HospitalService_Factory(t) { return new (t || HospitalService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
