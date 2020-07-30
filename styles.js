@@ -65,24 +65,6 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/owl.carousel2/dist/assets/owl.theme.green.min.css":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--12-1!./node_modules/postcss-loader/src??embedded!./node_modules/owl.carousel2/dist/assets/owl.theme.green.min.css ***!
-  \*********************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, "/**\n * Owl Carousel v2.2.1\n * Copyright 2013-2017 Saurabh Sharma\n * Licensed under  ()\n */\n.owl-theme .owl-dots,.owl-theme .owl-nav{text-align:center;-webkit-tap-highlight-color:transparent}\n.owl-theme .owl-nav{margin-top:10px}\n.owl-theme .owl-nav [class*=owl-]{color:#FFF;font-size:14px;margin:5px;padding:4px 7px;background:#D6D6D6;display:inline-block;cursor:pointer;border-radius:3px}\n.owl-theme .owl-nav [class*=owl-]:hover{background:#4DC7A0;color:#FFF;text-decoration:none}\n.owl-theme .owl-nav .disabled{opacity:.5;cursor:default}\n.owl-theme .owl-nav.disabled+.owl-dots{margin-top:10px}\n.owl-theme .owl-dots .owl-dot{display:inline-block;zoom:1}\n.owl-theme .owl-dots .owl-dot span{width:10px;height:10px;margin:5px 7px;background:#D6D6D6;display:block;-webkit-backface-visibility:visible;transition:opacity .2s ease;border-radius:30px}\n.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{background:#4DC7A0}", "",{"version":3,"sources":["owl.theme.green.min.css"],"names":[],"mappings":"AAAA;;;;EAIE;AACF,yCAAyC,iBAAiB,CAAC,uCAAuC;AAAC,oBAAoB,eAAe;AAAC,kCAAkC,UAAU,CAAC,cAAc,CAAC,UAAU,CAAC,eAAe,CAAC,kBAAkB,CAAC,oBAAoB,CAAC,cAAc,CAAC,iBAAiB;AAAC,wCAAwC,kBAAkB,CAAC,UAAU,CAAC,oBAAoB;AAAC,8BAA8B,UAAU,CAAC,cAAc;AAAC,uCAAuC,eAAe;AAAC,8BAA8B,oBAAoB,CAAC,MAAM;AAAC,mCAAmC,UAAU,CAAC,WAAW,CAAC,cAAc,CAAC,kBAAkB,CAAC,aAAa,CAAC,mCAAmC,CAAC,2BAA2B,CAAC,kBAAkB;AAAC,mFAAmF,kBAAkB","file":"owl.theme.green.min.css","sourcesContent":["/**\n * Owl Carousel v2.2.1\n * Copyright 2013-2017 Saurabh Sharma\n * Licensed under  ()\n */\n.owl-theme .owl-dots,.owl-theme .owl-nav{text-align:center;-webkit-tap-highlight-color:transparent}.owl-theme .owl-nav{margin-top:10px}.owl-theme .owl-nav [class*=owl-]{color:#FFF;font-size:14px;margin:5px;padding:4px 7px;background:#D6D6D6;display:inline-block;cursor:pointer;border-radius:3px}.owl-theme .owl-nav [class*=owl-]:hover{background:#4DC7A0;color:#FFF;text-decoration:none}.owl-theme .owl-nav .disabled{opacity:.5;cursor:default}.owl-theme .owl-nav.disabled+.owl-dots{margin-top:10px}.owl-theme .owl-dots .owl-dot{display:inline-block;zoom:1}.owl-theme .owl-dots .owl-dot span{width:10px;height:10px;margin:5px 7px;background:#D6D6D6;display:block;-webkit-backface-visibility:visible;transition:opacity .2s ease;border-radius:30px}.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{background:#4DC7A0}"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/bootstrap/scss/bootstrap.scss":
 /*!************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--13-1!./node_modules/postcss-loader/src??embedded!./node_modules/resolve-url-loader??ref--13-3!./node_modules/sass-loader/dist/cjs.js??ref--13-4!./node_modules/bootstrap/scss/bootstrap.scss ***!
@@ -263,35 +245,6 @@ module.exports = content.locals || {};
 
 var api = __webpack_require__(/*! ../../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
             var content = __webpack_require__(/*! !../../../css-loader/dist/cjs.js??ref--12-1!../../../postcss-loader/src??embedded!./owl.theme.default.min.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/owl.carousel2/dist/assets/owl.theme.default.min.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-
-
-module.exports = content.locals || {};
-
-/***/ }),
-
-/***/ "./node_modules/owl.carousel2/dist/assets/owl.theme.green.min.css":
-/*!************************************************************************!*\
-  !*** ./node_modules/owl.carousel2/dist/assets/owl.theme.green.min.css ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../css-loader/dist/cjs.js??ref--12-1!../../../postcss-loader/src??embedded!./owl.theme.green.min.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/owl.carousel2/dist/assets/owl.theme.green.min.css");
 
             content = content.__esModule ? content.default : content;
 
@@ -622,16 +575,15 @@ module.exports = content.locals || {};
 /***/ }),
 
 /***/ 2:
-/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./node_modules/bootstrap/scss/bootstrap.scss ./node_modules/owl.carousel2/dist/assets/owl.carousel.min.css ./node_modules/owl.carousel2/dist/assets/owl.theme.default.min.css ./node_modules/owl.carousel2/dist/assets/owl.theme.green.min.css ./src/styles.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./node_modules/owl.carousel2/dist/assets/owl.carousel.min.css ./node_modules/owl.carousel2/dist/assets/owl.theme.default.min.css ./node_modules/bootstrap/scss/bootstrap.scss ./src/styles.scss ***!
+  \*************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\Project\github\lionengineer\lovedog\node_modules\bootstrap\scss\bootstrap.scss */"./node_modules/bootstrap/scss/bootstrap.scss");
 __webpack_require__(/*! E:\Project\github\lionengineer\lovedog\node_modules\owl.carousel2\dist\assets\owl.carousel.min.css */"./node_modules/owl.carousel2/dist/assets/owl.carousel.min.css");
 __webpack_require__(/*! E:\Project\github\lionengineer\lovedog\node_modules\owl.carousel2\dist\assets\owl.theme.default.min.css */"./node_modules/owl.carousel2/dist/assets/owl.theme.default.min.css");
-__webpack_require__(/*! E:\Project\github\lionengineer\lovedog\node_modules\owl.carousel2\dist\assets\owl.theme.green.min.css */"./node_modules/owl.carousel2/dist/assets/owl.theme.green.min.css");
+__webpack_require__(/*! E:\Project\github\lionengineer\lovedog\node_modules\bootstrap\scss\bootstrap.scss */"./node_modules/bootstrap/scss/bootstrap.scss");
 module.exports = __webpack_require__(/*! E:\Project\github\lionengineer\lovedog\src\styles.scss */"./src/styles.scss");
 
 
