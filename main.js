@@ -492,7 +492,7 @@ class AdoptionComponent {
         this.GetTop30();
     }
     GetTop30() {
-        this.httpClient.get("./assets/data/animalAdopt.json").subscribe(data => {
+        this.httpClient.get("assets/data/animalAdopt.json").subscribe(data => {
             let hasImage = data.filter(x => x.album_file != '');
             let info = [];
             for (let i = 0; i < 6; i++) {
@@ -500,7 +500,6 @@ class AdoptionComponent {
                 info.push(hasImage[random]);
             }
             this.adoptionPromote = info;
-            console.log(this.adoptionPromote);
         });
     }
 }
@@ -777,7 +776,6 @@ class HostpitalComponent {
                 info.push(data[random]);
             }
             this.hospitalInfo = info;
-            console.log(this.hospitalInfo);
         });
     }
 }
@@ -945,7 +943,7 @@ class LostComponent {
         //this.getImageFromService();
     }
     getTop30() {
-        this.httpClient.get("./assets/data/animalMissing.json").subscribe(data => {
+        this.httpClient.get("assets/data/animalMissing.json").subscribe(data => {
             let hasImage = data.filter(x => x.PICTURE != '');
             let info = [];
             for (let i = 0; i < 6; i++) {
@@ -953,7 +951,6 @@ class LostComponent {
                 info.push(hasImage[random]);
             }
             this.lostPromote = info;
-            console.log(this.lostPromote);
         });
     }
     refresh() {
@@ -1330,7 +1327,7 @@ class HospitalService {
         this.httpClient = httpClient;
     }
     getHostpital() {
-        return this.httpClient.get("./assets/data/animalHostpital.json");
+        return this.httpClient.get("assets/data/animalHostpital.json");
     }
 }
 HospitalService.ɵfac = function HospitalService_Factory(t) { return new (t || HospitalService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
@@ -1414,6 +1411,7 @@ class ApiInterceptor {
     intercept(req, next) {
         const baseUrl = document.getElementsByTagName('base')[0].href;
         const apiReq = req.clone({ url: `${baseUrl}${req.url}` });
+        console.log(apiReq);
         return next.handle(apiReq);
     }
 }
