@@ -16,6 +16,12 @@
                 &:hover{
                     border-bottom: 2px solid basic.$color-4-hex;
                 }
+
+                @include basic.breakpoint(small) { 
+                    height: 48px;
+                    width: 48px;
+                    margin: 10px 10px;
+                }
             }
         }        
     }
